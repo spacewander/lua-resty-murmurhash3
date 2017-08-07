@@ -1,3 +1,7 @@
 cmake_minimum_required(VERSION 2.4)
 project (murmurhash3)
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE "Release")
+endif(NOT CMAKE_BUILD_TYPE)
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall -g")
 add_library(murmurhash3 SHARED MurmurHash3.cpp)

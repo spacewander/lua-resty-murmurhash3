@@ -2,7 +2,10 @@ import random
 import sys
 from string import ascii_letters, digits, punctuation
 
-import mmh3
+try:
+    import mmh3
+except:
+    raise ImportError("Run `pip install mmh3` to install mmh3 for test")
 
 
 visible = ascii_letters + digits + punctuation + " \t"
