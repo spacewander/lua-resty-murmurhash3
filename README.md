@@ -2,6 +2,10 @@
 
 lua-resty-murmurhash3 - the Lua binding of murmurhash3 via LuaJIT FFI
 
+## Status
+
+[![Build Status](https://travis-ci.org/spacewander/lua-resty-murmurhash3.svg?branch=master)](https://travis-ci.org/spacewander/lua-resty-murmurhash3)
+
 ## When should I use it?
 
 Murmurhash family has an awesome feature, it could hash data into a few bytes with fantasy speed.

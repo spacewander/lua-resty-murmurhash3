@@ -1,0 +1,28 @@
+sudo: false
+os:
+  - linux
+
+env:
+  - LUA="luajit 2.1"
+
+addons:
+  apt:
+    packages:
+    - gcc
+    - cmake
+
+before_install:
+  - pip install --user mmh3
+  - pip install --user hererocks
+  - python -m hererocks lua_install -r^ --$LUA # install all stuff into ./lua_install
+  - export PATH=$PATH:$PWD/lua_install/bin
+
+install:
+  - luarocks install luacheck
+  - luarocks install busted
+
+script:
+  - cmake . && cmake --build .
+  - luacheck --std max+busted *.lua
+  - export LD_LIBRARY_PATH=$(pwd):$LD_LIBRARY_PATH
+  - busted --verbose ./murmurhash3_spec.lua
