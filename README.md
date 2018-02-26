@@ -78,5 +78,5 @@ This version is optimized for x86 platform and its output is different from `mur
 
 ## Installation
 
-`cmake . && cmake --build .` to build the `libmurmurhash3` library, then copy it to your Nginx's PWD.
+`cmake . && cmake --build .` to build the `libmurmurhash3` library, then copy it to your `lua_package_cpath`.
 Also copy the `murmurhash3.lua` to your project, so that you could call those methods.
