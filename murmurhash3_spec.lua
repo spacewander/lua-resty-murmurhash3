@@ -4,8 +4,8 @@ local murmurhash3_128 = mmh3.murmurhash3_128
 
 local function assert_cmd_success(cmd)
     local exit = os.execute(cmd)
-    -- The return value from os.execute of differnt LuaJIT version is differnt,
-    -- because of the compatibility with Lua 5.2.
+    -- The return value from os.execute of different LuaJIT version is
+    -- different, because of the compatibility with Lua 5.2.
     if exit ~= 0 and exit ~= true then
         assert.is_true(false)
     end

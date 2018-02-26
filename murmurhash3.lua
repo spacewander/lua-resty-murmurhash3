@@ -56,7 +56,7 @@ local _M = {}
 
 function _M.murmurhash3(key, seed)
     seed = seed or 0
-    -- let LuaJIT throws bad eargument error for us
+    -- let LuaJIT throws bad argument error for us
     return tonumber(mmh3.MurmurHash3_x86_32(key, #key, seed))
 end
 
