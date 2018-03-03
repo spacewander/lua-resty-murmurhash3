@@ -52,7 +52,7 @@ if not mmh3 then
     error(table_concat(tried_paths, '\n'))
 end
 
-local _M = {}
+local _M = { VERSION = "1.0.0" }
 
 function _M.murmurhash3(key, seed)
     seed = seed or 0
