@@ -80,3 +80,6 @@ This version is optimized for x86 platform and its output is different from `mur
 
 `cmake . && cmake --build .` to build the `libmurmurhash3` library, then copy it to your `lua_package_cpath`.
 Also copy the `murmurhash3.lua` to your project, so that you could call those methods.
+
+If you are using `luarocks`, you could install it via `sudo luarocks install lua-resty-murmurhash3`
+and require it in your project with `local mmh3 = require "murmurhash3"`.
