@@ -1,8 +1,8 @@
 package = "lua-resty-murmurhash3"
-version = "1.0.0-0"
+version = "1.0.1-0"
 source = {
     url = "git://github.com/spacewander/lua-resty-murmurhash3",
-    tag = "1.0.0",
+    tag = "1.0.1",
 }
 description = {
     summary = "lua-resty-murmurhash3 - the Lua binding of murmurhash3 via LuaJIT FFI",
